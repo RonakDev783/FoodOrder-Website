@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <header class="bg-white/70 shadow-md/20">
+        <nav class="w-[92%] mx-auto flex items-center justify-between py-4">
+            <!-- Logo -->
+            <div>
+                <p
+                    class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-[28px] md:text-[34px] font-extrabold text-transparent">
+                    FoodOrder
+                </p>
+            </div>
+
+            <!-- Hamburger Icon (Mobile) -->
+            <div class="md:hidden">
+                <ion-icon onclick="onToggleMenu(this)" name="list-outline" class="text-3xl cursor-pointer"></ion-icon>
+            </div>
+
+            <!-- Nav Links -->
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full px-5 md:px-0 flex md:flex-row flex-col items-center md:gap-[4vw] gap-6 z-[999]">
+                <ul class="flex md:flex-row flex-col md:items-center gap-6 md:gap-[4vw] text-center">
+                    <li><a class="hover:text-pink-800" href="#">Home</a></li>
+                    <li><a class="hover:text-pink-800" href="#">Foods</a></li>
+                    <li><a class="hover:text-pink-800" href="#">Services</a></li>
+                    <li><a class="hover:text-pink-800" href="#">About</a></li>
+                </ul>
+
+                <!-- Sign In Button (Mobile also) -->
+                <div class="mt-4 md:mt-0">
+                    <button class="bg-pink-500 text-white font-semibold px-5 py-2 rounded-md hover:bg-pink-600">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="w-[92%] mx-auto my-8">
+        <div class="relative h-[500px] rounded-xl overflow-hidden">
+            <img src="https://img.freepik.com/free-photo/delicious-food-table_23-2150857812.jpg?ga=GA1.1.1000443780.1749798880&semt=ais_hybrid&w=740"
+                alt="Delicious Food" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <div class="text-center text-white p-6 max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Delicious Food Delivered Fast</h1>
+                    <p class="text-lg md:text-xl mb-6">
+                        Order your favorite meals with just a few clicks. Fresh, hot, and tasty – right to your door!
+                    </p>
+                    <a href="#"
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-md text-lg transition">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-[92%] mx-auto my-10">
+  <h2 class="text-2xl md:text-3xl font-bold mb-4">Inspiration for your first order</h2>
+
+  <div id="scrollContainer" class="flex gap-5 overflow-x-auto scroll-smooth pb-4">
+    <!-- Item 1 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/pizza.png" alt="Pizza"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Pizza</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/burger.png" alt="Burger"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Burger</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/cake.png" alt="Cake"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Cake</p>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/thali.png" alt="Thali"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Thali</p>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/sweets.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Sweets</p>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/dosa.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Dosa</p>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/noodles.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Noodles</p>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/pasta.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Pasta</p>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/lassi.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Lassi</p>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/momos.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Momos</p>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/shake.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Shake</p>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="flex-shrink-0 flex flex-col items-center">
+      <img src="img/tea.png" alt="Sweets"
+        class="w-24 h-24 rounded-full object-cover border-2 border-gray-300 hover:scale-105 transition" />
+      <p class="mt-2 font-medium text-sm">Tea</p>
+    </div>
+
+  </div>
+</section>
+
+    <script>
+
+        const navLinks = document.querySelector('.nav-links');
+
+        function onToggleMenu(e) {
+            e.name = e.name === 'list-outline' ? 'close-outline' : 'list-outline';
+            navLinks.classList.toggle('top-[15%]');
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
