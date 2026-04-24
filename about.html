@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FoodOrder</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="bg-white min-h-screen">
+    <!-- Header exactly as in index.html -->
+    <!-- NEW PREMIUM HEADER -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-[1000] border-b border-gray-100">
+        <nav class="w-[92%] mx-auto flex items-center justify-between h-20">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex items-center gap-2">
+                <span
+                    class="bg-gradient-to-r from-pink-600 to-violet-600 bg-clip-text text-3xl font-black text-transparent tracking-tighter">
+                    FoodOrder
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <ul class="flex items-center gap-8 text-gray-600 font-medium">
+                    <li><a href="index.html" class="hover:text-pink-600 transition-colors">Home</a></li>
+                    <li><a href="food.html" class="hover:text-pink-600 transition-colors">Foods</a></li>
+                    <li><a href="services.html" class="hover:text-pink-600 transition-colors">Services</a></li>
+                    <li><a href="about.html"
+                            class="text-pink-600 font-bold hover:text-pink-700 transition-colors">About</a></li>
+                </ul>
+                <a href="#"
+                    class="bg-pink-600 text-white px-7 py-2.5 rounded-full font-bold hover:bg-pink-700 transition-all shadow-lg shadow-pink-100">
+                    Sign In
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-3xl text-gray-800" onclick="onToggleMenu(this)">
+                <ion-icon name="list-outline"></ion-icon>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MOBILE SIDE DRAWER -->
+    <div id="mobileMenu"
+        class="fixed inset-y-0 right-0 w-[300px] bg-white z-[1100] shadow-2xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b">
+            <span class="font-black text-2xl text-pink-600">Menu</span>
+            <button onclick="onToggleMenu(this)" class="text-3xl text-gray-500">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <ul class="flex flex-col p-6 gap-6 text-lg font-bold text-gray-700">
+            <li><a href="index.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a></li>
+            <li><a href="food.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="fast-food-outline"></ion-icon> Foods
+                </a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="construct-outline"></ion-icon> Services
+                </a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()" class="text-pink-600 flex items-center gap-3">
+                    <ion-icon name="information-circle-outline"></ion-icon> About
+                </a></li>
+            <li class="mt-4">
+                <a href="#" onclick="closeMobileMenu()"
+                    class="bg-pink-600 text-white w-full py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-pink-100">
+                    <ion-icon name="person-outline"></ion-icon> Sign In
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Premium Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop"
+            alt="About Hero" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">Our Story</h1>
+            <p class="text-pink-200 text-lg md:text-2xl font-medium max-w-2xl mx-auto opacity-90">
+                Redefining the way you experience food, one delivery at a time.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 w-[92%] mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2">
+                <span class="text-pink-600 font-bold tracking-widest uppercase text-sm mb-4 block">Who We Are</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">Driven by Passion,
+                    <br>Fueled by Freshness.
+                </h2>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    Founded in 2024, FoodOrder started with a simple idea: everyone deserves access to
+                    restaurant-quality food at home without the long wait. We bridged the gap between craving and
+                    satisfaction by building a network of the finest local chefs and high-speed logistics.
+                </p>
+                <div class="grid grid-cols-2 gap-8 mt-10">
+                    <div>
+                        <h4 class="text-3xl font-bold text-pink-600">500+</h4>
+                        <p class="text-gray-500 font-medium">Partner Restaurants</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-violet-600">50K+</h4>
+                        <p class="text-gray-500 font-medium">Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl z-20">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
+                        alt="Our kitchen" class="w-full h-[500px] object-cover">
+                </div>
+                <!-- Decorative elements -->
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-pink-500 rounded-full -z-10 blur-2xl opacity-20">
+                </div>
+                <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-violet-600 rounded-full -z-10 blur-3xl opacity-20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders/Team Section -->
+    <section class="bg-gray-50 py-24">
+        <div class="w-[92%] mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Meet the Visionaries</h2>
+            <p class="text-gray-500 text-lg">The hearts and minds behind FoodOrder's success.</p>
+        </div>
+        <div class="w-[92%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Team Member 1 -->
+            <div class="text-center group">
+                <div
+                    class="relative mb-6 mx-auto w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+                        alt="CEO"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Rahul Sharma</h3>
+                <p class="text-pink-600 font-semibold mb-4">Founder & CEO</p>
+                <div class="flex justify-center gap-4 text-gray-400">
+                    <ion-icon name="logo-linkedin" class="text-xl cursor-pointer hover:text-blue-600"></ion-icon>
+                    <ion-icon name="logo-twitter" class="text-xl cursor-pointer hover:text-sky-400"></ion-icon>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center group">
+                <div
+                    class="relative mb-6 mx-auto w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                        alt="COO"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Priya Verma</h3>
+                <p class="text-pink-600 font-semibold mb-4">Chief Operations</p>
+                <div class="flex justify-center gap-4 text-gray-400">
+                    <ion-icon name="logo-linkedin" class="text-xl cursor-pointer hover:text-blue-600"></ion-icon>
+                    <ion-icon name="logo-twitter" class="text-xl cursor-pointer hover:text-sky-400"></ion-icon>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="text-center group">
+                <div
+                    class="relative mb-6 mx-auto w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+                        alt="Head Chef"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Amit Patel</h3>
+                <p class="text-pink-600 font-semibold mb-4">Culinary Director</p>
+                <div class="flex justify-center gap-4 text-gray-400">
+                    <ion-icon name="logo-linkedin" class="text-xl cursor-pointer hover:text-blue-600"></ion-icon>
+                    <ion-icon name="logo-instagram" class="text-xl cursor-pointer hover:text-pink-500"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excellence Section -->
+    <section class="py-24 text-center">
+        <div class="w-[92%] mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8 italic">"We don't serve fast food, we serve good food as
+                fast as we can."</h2>
+            <p class="text-gray-500 text-xl">— The FoodOrder Mantra</p>
+            <div
+                class="mt-16 flex flex-wrap justify-center gap-12 sm:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-300">
+                <!-- Inline Zomato Logo -->
+                <svg class="h-8 md:h-10" viewBox="0 0 100 24" fill="#E23744" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.9 1.1c.3 0 .6.1.8.3.2.2.3.5.3.8s-.1.6-.3.8c-.2.2-.5.3-.8.3h-8.7l8.7 8.7c.2.2.3.5.3.8s-.1.6-.3.8c-.2.2-.5.3-.8.3s-.6-.1-.8-.3l-9.8-9.8c-.2-.2-.3-.5-.3-.8s.1-.6.3-.8c.2-.2.5-.3.8-.3h10.8z" />
+                    <text x="18" y="18" font-family="Arial, sans-serif" font-weight="bold" font-size="16">ZOMATO</text>
+                </svg>
+                <!-- Inline Swiggy Logo -->
+                <svg class="h-8 md:h-12" viewBox="0 0 120 30" fill="#FC8019" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15 5c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
+                    <text x="30" y="21" font-family="Arial, sans-serif" font-weight="bold" font-size="16">SWIGGY</text>
+                </svg>
+                <!-- Inline Google Logo -->
+                <svg class="h-8 md:h-10" viewBox="0 0 100 33" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#4285F4"
+                        d="M12.5 16.5c0-.9-.1-1.7-.2-2.5H6.4v4.8h3.4c-.1.8-.6 1.4-1.3 1.9v3.1h2.1c1.2-1.1 1.9-2.8 1.9-4.8z" />
+                    <path fill="#34A853"
+                        d="M6.4 22.8c1.7 0 3.2-.6 4.3-1.6l-2.1-3.1c-.6.4-1.3.6-2.2.6-1.7 0-3.1-1.1-3.6-2.6H.6v3.3c1.1 2.1 3.5 3.4 5.8 3.4z" />
+                    <path fill="#FBBC05"
+                        d="M2.8 16.1c-.1-.5-.2-1-.2-1.6s.1-1.1.2-1.6V9.6H.6C0 11 .6 12.5.6 14.5s-.6 3.5 0 4.9l2.2-3.3z" />
+                    <path fill="#EA4335"
+                        d="M6.4 6.2c.9 0 1.8.3 2.5 1l1.8-1.8C9.5 4.3 8.1 3.7 6.4 3.7 4.1 3.7 1.7 5 .6 7.1l2.2 3.3c.5-1.5 1.9-2.6 3.6-2.6z" />
+                    <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="16"
+                        fill="#5f6368">GOOGLE</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand Section -->
+            <div>
+                <p
+                    class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-3xl font-extrabold text-transparent mb-6">
+                    FoodOrder
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Redefining the way you experience food. We bring the finest local cuisines directly to your doorstep
+                    with speed
+                    and care.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="text-gray-400 hover:text-pink-500 transition-colors">Home</a></li>
+                    <li><a href="food.html" class="text-gray-400 hover:text-pink-500 transition-colors">Food Menu</a>
+                    </li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-pink-500 transition-colors">Our
+                            Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-pink-500 transition-colors">About Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="call-outline" class="text-pink-500"></ion-icon>
+                        <span>+91 00000 00000</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="mail-outline" class="text-pink-500"></ion-icon>
+                        <span>hello@example.com</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="location-outline" class="text-pink-500"></ion-icon>
+                        <span>404, Foodie Junction, Taste City, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                <p class="text-gray-400 mb-6">Subscribe to get the latest offers and menu updates.</p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Your Email"
+                        class="bg-gray-800 border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-pink-500 outline-none">
+                    <button type="submit"
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-md transition-all">Subscribe
+                        Now</button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="w-[92%] mx-auto border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm text-center md:text-left">
+            <p>© 2026 FoodOrder. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

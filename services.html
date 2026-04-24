@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - FoodOrder</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header exactly as in index.html -->
+    <!-- NEW PREMIUM HEADER -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-[1000] border-b border-gray-100">
+        <nav class="w-[92%] mx-auto flex items-center justify-between h-20">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex items-center gap-2">
+                <span
+                    class="bg-gradient-to-r from-pink-600 to-violet-600 bg-clip-text text-3xl font-black text-transparent tracking-tighter">
+                    FoodOrder
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <ul class="flex items-center gap-8 text-gray-600 font-medium">
+                    <li><a href="index.html" class="hover:text-pink-600 transition-colors">Home</a></li>
+                    <li><a href="food.html" class="hover:text-pink-600 transition-colors">Foods</a></li>
+                    <li><a href="services.html"
+                            class="text-pink-600 font-bold hover:text-pink-700 transition-colors">Services</a></li>
+                    <li><a href="about.html" class="hover:text-pink-600 transition-colors">About</a></li>
+                </ul>
+                <a href="#"
+                    class="bg-pink-600 text-white px-7 py-2.5 rounded-full font-bold hover:bg-pink-700 transition-all shadow-lg shadow-pink-100">
+                    Sign In
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-3xl text-gray-800" onclick="onToggleMenu(this)">
+                <ion-icon name="list-outline"></ion-icon>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MOBILE SIDE DRAWER -->
+    <div id="mobileMenu"
+        class="fixed inset-y-0 right-0 w-[300px] bg-white z-[1100] shadow-2xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b">
+            <span class="font-black text-2xl text-pink-600">Menu</span>
+            <button onclick="onToggleMenu(this)" class="text-3xl text-gray-500">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <ul class="flex flex-col p-6 gap-6 text-lg font-bold text-gray-700">
+            <li><a href="index.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a></li>
+            <li><a href="food.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="fast-food-outline"></ion-icon> Foods
+                </a></li>
+            <li><a href="services.html" onclick="closeMobileMenu()" class="text-pink-600 flex items-center gap-3">
+                    <ion-icon name="construct-outline"></ion-icon> Services
+                </a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()" class="flex items-center gap-3">
+                    <ion-icon name="information-circle-outline"></ion-icon> About
+                </a></li>
+            <li class="mt-4">
+                <a href="#" onclick="closeMobileMenu()"
+                    class="bg-pink-600 text-white w-full py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-pink-100">
+                    <ion-icon name="person-outline"></ion-icon> Sign In
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Hero Section for Services -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-pink-50 to-white overflow-hidden relative">
+        <div class="w-[92%] mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">Our <span
+                    class="text-pink-600">Premium</span> Services</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+                We don't just deliver food; we deliver satisfaction, speed, and safety in every order. Discover how we
+                make your dining experience seamless.
+            </p>
+        </div>
+        <!-- Decorative blobs -->
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-pink-200 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute -bottom-20 -left-10 w-96 h-96 bg-violet-200 rounded-full blur-3xl opacity-30"></div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="w-[92%] mx-auto py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+
+            <!-- Service 1: Fast Delivery -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 text-pink-600 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="rocket-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Fastest Delivery</h3>
+                <p class="text-gray-600 leading-relaxed">Get your food delivered to your doorstep in 30 minutes or less.
+                    We prioritize speed without compromising quality.</p>
+            </div>
+
+            <!-- Service 2: Quality Food -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-violet-100 rounded-xl flex items-center justify-center mb-6 text-violet-600 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="star-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">High Quality</h3>
+                <p class="text-gray-600 leading-relaxed">We partner with only top-rated restaurants that maintain the
+                    highest hygiene and quality standards.</p>
+            </div>
+
+            <!-- Service 3: Easy Ordering -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 text-pink-600 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="phone-portrait-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Easy Ordering</h3>
+                <p class="text-gray-600 leading-relaxed">Our user-friendly platform makes ordering your favorite meals a
+                    breeze. Just a few clicks and you're done!</p>
+            </div>
+
+            <!-- Service 4: 24/7 Support -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-violet-100 rounded-xl flex items-center justify-center mb-6 text-violet-600 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="headset-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">24/7 Support</h3>
+                <p class="text-gray-600 leading-relaxed">Have a question? Our support team is available round the clock
+                    to help you with your orders and queries.</p>
+            </div>
+
+            <!-- Service 5: Contactless Delivery -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 text-pink-600 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="shield-checkmark-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Safe & Secure</h3>
+                <p class="text-gray-600 leading-relaxed">Choose contactless delivery for maximum safety. Your health is
+                    our top priority at all times.</p>
+            </div>
+
+            <!-- Service 6: Variety -->
+            <div
+                class="group bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <div
+                    class="w-16 h-16 bg-violet-100 rounded-xl flex items-center justify-center mb-6 text-violet-600 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-300">
+                    <ion-icon name="restaurant-outline" class="text-3xl"></ion-icon>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Bulk Orders</h3>
+                <p class="text-gray-600 leading-relaxed">Planning a party? We handle bulk orders and catering services
+                    to make your events delicious and memorable.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+        class="w-[92%] mx-auto my-16 bg-gradient-to-r from-pink-500 to-violet-600 rounded-3xl p-10 md:p-16 text-center text-white shadow-xl">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to order?</h2>
+        <p class="text-lg md:text-xl opacity-90 mb-10 max-w-xl mx-auto">Join thousands of happy customers and get your
+            favorite food delivered today.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="food.html"
+                class="bg-white text-pink-600 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg">Browse
+                Menu</a>
+            <a href="#"
+                class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-pink-600 transition-all">Download
+                App</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand Section -->
+            <div>
+                <p
+                    class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-3xl font-extrabold text-transparent mb-6">
+                    FoodOrder
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Redefining the way you experience food. We bring the finest local cuisines directly to your doorstep
+                    with speed
+                    and care.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-all">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="text-gray-400 hover:text-pink-500 transition-colors">Home</a></li>
+                    <li><a href="food.html" class="text-gray-400 hover:text-pink-500 transition-colors">Food Menu</a>
+                    </li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-pink-500 transition-colors">Our
+                            Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-pink-500 transition-colors">About Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="call-outline" class="text-pink-500"></ion-icon>
+                        <span>+91 00000 00000</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="mail-outline" class="text-pink-500"></ion-icon>
+                        <span>hello@example.com</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-400">
+                        <ion-icon name="location-outline" class="text-pink-500"></ion-icon>
+                        <span>404, Foodie Junction, Taste City, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                <p class="text-gray-400 mb-6">Subscribe to get the latest offers and menu updates.</p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Your Email"
+                        class="bg-gray-800 border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-pink-500 outline-none">
+                    <button type="submit"
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-md transition-all">Subscribe
+                        Now</button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="w-[92%] mx-auto border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm text-center md:text-left">
+            <p>© 2026 FoodOrder. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
